@@ -126,8 +126,8 @@
             <td th:text="${user.getPrice()}" style="text-align: center; font-size: 50px"></td>
             <td th:text="${user.getGenre()}" style="text-align: center; font-size: 50px"></td>
             <td>
-                <a th:href="@{'/auth/update/'+${user.id}}" class="box">edit</a>
-                <form th:method="DELETE" th:action="@{'/auth/delete/'+${user.id}}" th:object="${user}">
+                <a th:href="@{'/store/update/'+${user.id}}" class="box">edit</a>
+                <form th:method="DELETE" th:action="@{'/store/delete/'+${user.id}}" th:object="${user}">
                     <button type="submit" CLASS="gradient-button">DELETE</button>
                 </form>
             </td>
@@ -135,7 +135,7 @@
     </table>
 </div>
 <div style="background-color: #1b2631; text-align: center">
-    <a th:href="@{'/auth/add'}" class="double-border-button" >Add new user</a>
+    <a th:href="@{'/store/add'}" class="double-border-button" >Add new user</a>
 </div>
 </body>
 </html>

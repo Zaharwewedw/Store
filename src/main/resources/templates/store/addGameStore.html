@@ -1,13 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
 <body>
-<form th:method="PUT" th:action="@{/auth/update}" th:object="${Store}">
-    <label for="id">Придумайте Пароль </label>
-    <input type="hidden" th:field="*{id}" id="id">
+<form th:method="POST" th:action="@{/store/add}" th:object="${Store}">
+    <label for="genre">Придумайте Пароль </label>
     <input type="text" th:field="*{genre}" id="genre">
     <div style="color: red" th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}">Password Error</div>
     <br/>
