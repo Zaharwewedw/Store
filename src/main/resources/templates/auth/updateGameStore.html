@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:method="PUT" th:action="@{/auth/update}" th:object="${Store}">
+    <label for="id">Придумайте Пароль </label>
+    <input type="hidden" th:field="*{id}" id="id">
+    <input type="text" th:field="*{genre}" id="genre">
+    <div style="color: red" th:if="${#fields.hasErrors('genre')}" th:errors="*{genre}">Password Error</div>
+    <br/>
+    <label for="price">Укажите цену игры</label>
+    <input type="text" th:field="*{price}" id="price">
+    <div style="color: red" th:if="${#fields.hasErrors('price')}" th:errors="*{price}">Email Error</div>
+    <br/>
+    <label for="name">Введите имя компании </label>
+    <input type="text"  th:field="*{name}" id="name">
+    <div style="color: red" th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Name Error</div>
+    <br/>
+    <input type="submit" value="Sign up!"/>
+</form>
+</body>
+</html>
